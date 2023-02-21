@@ -1,0 +1,62 @@
+.main-container{
+    width: 80%;
+    padding: 24px 8px;
+    margin: 16px auto;
+    display: flex;
+    text-align: justify;
+}
+.main-container .underline{
+    text-decoration: underline;
+}
+.main h1{
+    margin: 20px 0;
+}
+.row{
+    text-align: center;
+}
+
+.products{
+    flex: 3;
+}
+.cal-money{
+    flex: 1.2;
+}
+.discount{
+
+}
+.enter-voucher{
+    /* display: flex; */
+}
+.enter-voucher input{
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.enter-voucher button{
+
+    font-size: 16px;
+    background-color: #5A82E7;
+    color: white;
+    padding: 10px;
+    margin-left: 15px;
+    border: #0b3296 2px solid;
+    border-radius: 10px;
+    float:right;
+} 
+.money p{
+    font-size: 20px;
+    margin: 15px 0;
+}
+.shopping-buy-btn{
+    text-align: center!;
+    font-size: 18px;
+    background-color: #6851A8;
+    width: 100%;
+    color: white;
+    padding: 15px;
+    border: #0b3296 2px solid;
+    border-radius: 10px;
+}
+.shopping-buy-btn:hover{
+    background-color: #5A82E7;
+}

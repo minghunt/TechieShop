@@ -1,0 +1,56 @@
+.regisForm-format {
+    background-color: #ccc;
+    width: 25%;
+    height: fit-content;
+    display: block;
+    border: solid 2px black;
+    border-radius: 30px;
+    /* margin-top: 7vh; */
+    /* padding-top:6vh ; */
+}
+.regisForm-format h3 {
+    padding: 24px;
+    margin: 0;
+}
+.regisForm-format p{
+    margin-top: 15px;
+    color: darkblue;
+    padding: 12px;
+}
+
+.regisForm-format form input {
+    display: block;
+    width: 70%;
+    margin: auto;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 25px;
+    border: 0;
+}
+.regisForm-format form button {
+    background-color: #5A82E7;
+    color: white;
+    border-radius:25px ;
+    padding: 10px 0;
+    margin-top: 15px;
+}
+
+.regismain {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #ccc;
+    height: 70vh;
+    align-items: center;
+}
+
+.logo {
+    width: 15vw;
+    height: 19vw;
+}
+
+.regismain button {
+    border: 0;
+    width: 150px;
+    height: auto;
+    justify-content: center;
+}
