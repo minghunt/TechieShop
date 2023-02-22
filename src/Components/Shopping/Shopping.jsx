@@ -72,7 +72,7 @@ function Shopping({ items, IncreaseQuantity, DecreaseQuantity, DeleteCart }) {
                         <td>{item.name}</td>
                         <td>
                           <img
-                            src={item.image}
+                            src={require("../../images/sanpham"+item.id+".jpg")}
                             alt=""
                             style={{ width: "100px", height: "80px" }}
                           />

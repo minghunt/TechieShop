@@ -36,7 +36,7 @@ export function ProductDetails(props) {
                             <img
                               className="product-img"
                               alt=""
-                              src={items.hinh}
+                              src={require("../../images/sanpham"+items.maSp+".jpg")}
                             />
                             <div className="product-info">
                               <h3 className="product-name">{items.name}</h3>
@@ -50,7 +50,7 @@ export function ProductDetails(props) {
                               </p>
                               <h2 className="decrease-price">
                                 Khuyến mãi còn:{" "}
-                                {vnd.format(items.price - 100000)}
+                                {vnd.format(items.price - 40000)}
                               </h2>
                               <div className="btn-footer">
                                 <Link className="buy-btn" to={buylink}>

@@ -25,12 +25,7 @@ function MainPage({noti,Off_Noti}) {
       return;
     }
     Off_Noti()
-  };const data= [
-    {price:100000, name:'hiui', img:'jyjy', maSp:12,loai:'loa'},
-    
-    {price:100000, name:'hiui', img:'jyjy', maSp:13,loai:'loa'}
-    ];
-    const [list, setlist] = data;  
+  };
    
 
     let settings = {

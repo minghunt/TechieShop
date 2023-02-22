@@ -9,7 +9,7 @@ import Snackbar from '@mui/material/Snackbar';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-
+import data from "../../data";
 const axios = require("axios");
 
 const Alert = React.forwardRef(function Alert(
@@ -19,7 +19,7 @@ const Alert = React.forwardRef(function Alert(
     return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
   });
 export function ProductDetails({noti,Off_Noti}) {
-  const [product, setProduct] = React.useState(null);
+  const [product, setProduct] = data;
   const handleClose = (event, reason) => {
     if (reason === 'clickaway') {
       return;
@@ -28,17 +28,8 @@ export function ProductDetails({noti,Off_Noti}) {
   };
   
   const { productID } = useParams();
-  React.useEffect(() => {
-    axios
-      .get("http://demoapiiii.somee.com/api/ServiceController/GetAllSP")
-      .then(function (response) {
-        setProduct(response.data);
-      });
-    
-  });
-  if (!product) {
-    return null;
-  }
+
+ 
   var vnd = Intl.NumberFormat('vi-VN', {
     style: 'currency',
     currency: 'VND'
@@ -60,7 +51,7 @@ export function ProductDetails({noti,Off_Noti}) {
         <h3 class="section-title">Sản phẩm liên quan</h3>
         <div className="related-products">
             <Slider {...settings}>
-                {product.map((item)=>productID!=item.maSp&&product[productID-1].loai===item.loai&&
+                {data.map((item)=>productID!=item.maSp&&data[productID-1].loai===item.loai&&
                 <ContainerItem price={item.price} name={item.name} img={item.hinh} maSp={item.maSp}/>)}
             </Slider>
         </div>

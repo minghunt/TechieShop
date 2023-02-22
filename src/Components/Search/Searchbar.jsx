@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import "./Searchbar.css";
 import searchIcon from "../Images/black-search-icon.png";
 import axios from "axios";
-
+import data from "../../data";
 var options = [];
 
 const DropdownIndicator = (props) => {
@@ -33,11 +33,8 @@ function ParseResponse(response) {
   });
 }
 
-axios
-  .get("http://demoapiiii.somee.com/api/ServiceController/GetAllSP")
-  .then(function (response) {
-    ParseResponse(response.data);
-  });
+    ParseResponse(data);
+
 
 function Searchbar() {
   let navigate = useNavigate();

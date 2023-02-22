@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./ContainerItem.css";
 import { AddCart } from "../actions";
 import { connect } from "react-redux";
@@ -6,7 +6,6 @@ import whiteplus from "./Images/whiteplus.jpg";
 import { Link } from "react-router-dom";
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert, { AlertProps } from "@mui/material/Alert";
-
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
@@ -23,7 +22,6 @@ export function ContainerItem(props) {
     name: props.name,
     hinh: props.img,
   };
-
   const [open, setOpen] = React.useState(false);
 
   var linkProduct = "/Products/" + props.maSp;
@@ -31,7 +29,7 @@ export function ContainerItem(props) {
   if (props.isLoggedin) {
     linkCart = "/ShoppingCart";
   }
-
+  var imglink=""+props.img;
   const handleClick = () => {
     setTimeout(() => {
       setOpen(true);
@@ -55,7 +53,7 @@ export function ContainerItem(props) {
       </Snackbar>
       <Link to={linkProduct}>
         <button onClick={() => refresh()}>
-          <img src={props.img} alt="sanpham" className="ContainerItem_image" />
+          <img src={require("../images/sanpham"+props.maSp+".jpg")} alt="sanpham" className="ContainerItem_image" />
           <p className="containerItem_name">{props.name}</p>
         </button>
       </Link>
